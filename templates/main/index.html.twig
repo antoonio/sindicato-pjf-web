@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inicio - Sindicato PJF{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Bienvenido al Sindicato PJF</h1>
+    <p class="lead">Página principal del sindicato del Poder Judicial de la Federación.</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Noticias Recientes</h5>
+                    <p class="card-text">Aquí encontrarás las últimas noticias y actualizaciones del sindicato.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Próximos Eventos</h5>
+                    <p class="card-text">Mantente informado sobre nuestros próximos eventos y actividades.</p>
+                    <a href="{{ path('app_events') }}" class="btn btn-primary">Ver Eventos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Beneficios</h5>
+                    <p class="card-text">Conoce todos los beneficios que ofrecemos a nuestros afiliados.</p>
+                    <a href="{{ path('app_benefits') }}" class="btn btn-primary">Ver Beneficios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sobre Nosotros</h5>
+                    <p class="card-text">Conoce más sobre nuestra historia y misión.</p>
+                    <a href="{{ path('app_about_us') }}" class="btn btn-primary">Leer Más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contáctanos</h5>
+                    <p class="card-text">¿Tienes alguna pregunta? Ponte en contacto con nosotros.</p>
+                    <a href="{{ path('app_contact') }}" class="btn btn-primary">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

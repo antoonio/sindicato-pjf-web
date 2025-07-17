@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Beneficios - Sindicato PJF{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Beneficios para Afiliados</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('app_index') }}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Beneficios</li>
+        </ol>
+    </nav>
+    
+    <div class="alert alert-info mt-3">
+        <p class="mb-0">Como miembro del Sindicato del Poder Judicial de la Federación, tienes acceso a numerosos beneficios diseñados para mejorar tu calidad de vida y desarrollo profesional.</p>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Beneficios Económicos</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Préstamos personales con tasas preferenciales</li>
+                        <li class="list-group-item">Fondo de ahorro con rendimientos competitivos</li>
+                        <li class="list-group-item">Descuentos en establecimientos comerciales</li>
+                        <li class="list-group-item">Apoyo económico en situaciones de emergencia</li>
+                        <li class="list-group-item">Seguro de vida complementario</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">Beneficios de Salud</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Seguro médico complementario</li>
+                        <li class="list-group-item">Descuentos en servicios dentales</li>
+                        <li class="list-group-item">Convenios con ópticas y laboratorios</li>
+                        <li class="list-group-item">Programas de prevención de enfermedades</li>
+                        <li class="list-group-item">Apoyo psicológico y emocional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">Desarrollo Profesional</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cursos y talleres de capacitación</li>
+                        <li class="list-group-item">Becas para estudios de posgrado</li>
+                        <li class="list-group-item">Biblioteca jurídica especializada</li>
+                        <li class="list-group-item">Asesoría para desarrollo de carrera</li>
+                        <li class="list-group-item">Conferencias y seminarios</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-2">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="card-title mb-0">Recreación y Cultura</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Eventos culturales y artísticos</li>
+                        <li class="list-group-item">Instalaciones deportivas</li>
+                        <li class="list-group-item">Viajes y excursiones a precios especiales</li>
+                        <li class="list-group-item">Clubes de lectura y actividades culturales</li>
+                        <li class="list-group-item">Descuentos en entradas a eventos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title mb-0">Asesoría Legal</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Representación en conflictos laborales</li>
+                        <li class="list-group-item">Asesoría jurídica en asuntos personales</li>
+                        <li class="list-group-item">Defensa de derechos laborales</li>
+                        <li class="list-group-item">Orientación en trámites administrativos</li>
+                        <li class="list-group-item">Consultas legales gratuitas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="card-title mb-0">Beneficios Familiares</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Becas para hijos de afiliados</li>
+                        <li class="list-group-item">Actividades recreativas familiares</li>
+                        <li class="list-group-item">Apoyo en útiles escolares</li>
+                        <li class="list-group-item">Campamentos de verano para hijos</li>
+                        <li class="list-group-item">Descuentos en servicios para la familia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mt-4 mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">¿Cómo acceder a estos beneficios?</h5>
+        </div>
+        <div class="card-body">
+            <p>Para acceder a estos beneficios, debes ser miembro activo del Sindicato del Poder Judicial de la Federación. Si aún no eres miembro, puedes afiliarte siguiendo estos pasos:</p>
+            <ol>
+                <li>Completa el formulario de afiliación disponible en nuestra oficina o en nuestra aplicación móvil.</li>
+                <li>Presenta tu identificación oficial y comprobante de trabajo en el Poder Judicial.</li>
+                <li>Paga la cuota de afiliación correspondiente.</li>
+                <li>Recibe tu credencial de afiliado y comienza a disfrutar de todos los beneficios.</li>
+            </ol>
+            <p>Para más información, no dudes en contactarnos:</p>
+            <div class="text-center">
+                <a href="{{ path('app_contact') }}" class="btn btn-primary">Contactar al Sindicato</a>
+                <a href="{{ path('app_our_app') }}" class="btn btn-success ml-2">Descargar Nuestra App</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

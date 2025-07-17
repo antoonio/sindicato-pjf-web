@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sobre Nosotros - Sindicato PJF{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Sobre Nosotros</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('app_index') }}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sobre Nosotros</li>
+        </ol>
+    </nav>
+    
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <h2>Nuestra Historia</h2>
+            <p>El Sindicato del Poder Judicial de la Federación fue fundado con el propósito de representar y defender los derechos laborales de todos los trabajadores del Poder Judicial.</p>
+            
+            <p>A lo largo de nuestra historia, hemos trabajado incansablemente para mejorar las condiciones laborales, promover la capacitación continua y fomentar un ambiente de trabajo justo y equitativo.</p>
+            
+            <h2 class="mt-4">Misión</h2>
+            <p>Nuestra misión es representar y defender los intereses laborales, económicos y sociales de los trabajadores del Poder Judicial de la Federación, promoviendo su desarrollo profesional y personal.</p>
+            
+            <h2 class="mt-4">Visión</h2>
+            <p>Ser un sindicato líder, reconocido por su compromiso con la justicia, la transparencia y la defensa efectiva de los derechos de sus agremiados, contribuyendo al fortalecimiento del sistema judicial mexicano.</p>
+            
+            <h2 class="mt-4">Valores</h2>
+            <ul>
+                <li><strong>Integridad:</strong> Actuamos con honestidad y ética en todas nuestras acciones.</li>
+                <li><strong>Solidaridad:</strong> Trabajamos unidos por el bienestar común de todos nuestros agremiados.</li>
+                <li><strong>Transparencia:</strong> Mantenemos una comunicación clara y abierta sobre nuestras actividades y decisiones.</li>
+                <li><strong>Compromiso:</strong> Nos dedicamos plenamente a la defensa de los derechos de nuestros miembros.</li>
+                <li><strong>Respeto:</strong> Valoramos la diversidad de opiniones y promovemos un trato digno para todos.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Directiva Actual
+                </div>
+                <div class="card-body">
+                    <p><strong>Presidente:</strong> [Nombre del Presidente]</p>
+                    <p><strong>Secretario General:</strong> [Nombre del Secretario]</p>
+                    <p><strong>Tesorero:</strong> [Nombre del Tesorero]</p>
+                    <p><strong>Vocales:</strong></p>
+                    <ul>
+                        <li>[Nombre del Vocal 1]</li>
+                        <li>[Nombre del Vocal 2]</li>
+                        <li>[Nombre del Vocal 3]</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-header bg-success text-white">
+                    Contáctanos
+                </div>
+                <div class="card-body">
+                    <p><i class="fas fa-map-marker-alt"></i> [Dirección de la sede]</p>
+                    <p><i class="fas fa-phone"></i> [Número de teléfono]</p>
+                    <p><i class="fas fa-envelope"></i> [Correo electrónico]</p>
+                    <a href="{{ path('app_contact') }}" class="btn btn-primary">Formulario de Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

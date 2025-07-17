@@ -1,0 +1,189 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacto - Sindicato PJF{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Contacto</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('app_index') }}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+        </ol>
+    </nav>
+    
+    <div class="alert alert-info mt-3">
+        <p class="mb-0">Estamos aquí para ayudarte. No dudes en contactarnos para cualquier consulta, sugerencia o solicitud de información.</p>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Formulario de Contacto</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu número telefónico">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="departamento">Departamento</label>
+                            <select class="form-control" id="departamento">
+                                <option selected>Selecciona un departamento</option>
+                                <option>Información General</option>
+                                <option>Afiliación</option>
+                                <option>Beneficios</option>
+                                <option>Asesoría Legal</option>
+                                <option>Eventos</option>
+                                <option>Quejas y Sugerencias</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>
+                        
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="privacidad">
+                            <label class="form-check-label" for="privacidad">Acepto la política de privacidad</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Información de Contacto</h5>
+                </div>
+                <div class="card-body">
+                    <h6><i class="fas fa-map-marker-alt"></i> Dirección</h6>
+                    <p>Av. Revolución 1508, Col. Guadalupe Inn<br>Alcaldía Álvaro Obregón, C.P. 01020<br>Ciudad de México, México</p>
+                    
+                    <h6><i class="fas fa-phone"></i> Teléfonos</h6>
+                    <p>Oficina principal: (55) 1234-5678<br>Atención a afiliados: (55) 8765-4321</p>
+                    
+                    <h6><i class="fas fa-envelope"></i> Correo Electrónico</h6>
+                    <p>info@sindicatopjf.org.mx<br>afiliacion@sindicatopjf.org.mx</p>
+                    
+                    <h6><i class="far fa-clock"></i> Horario de Atención</h6>
+                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Redes Sociales</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-facebook fa-2x text-primary"></i>
+                                <p>Facebook</p>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-twitter fa-2x text-info"></i>
+                                <p>Twitter</p>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-instagram fa-2x text-danger"></i>
+                                <p>Instagram</p>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-youtube fa-2x text-danger"></i>
+                                <p>YouTube</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Ubicación</h5>
+                </div>
+                <div class="card-body p-0">
+                    <!-- Aquí iría un mapa, pero usaremos un placeholder -->
+                    <img src="https://via.placeholder.com/600x300?text=Mapa+de+Ubicación" class="img-fluid" alt="Mapa de ubicación">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card mt-4 mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Preguntas Frecuentes</h5>
+        </div>
+        <div class="card-body">
+            <div class="accordion" id="accordionFAQ">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Cómo puedo afiliarme al sindicato?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFAQ">
+                        <div class="card-body">
+                            Para afiliarte al sindicato, debes completar el formulario de afiliación disponible en nuestras oficinas o en nuestra aplicación móvil, presentar tu identificación oficial y comprobante de trabajo en el Poder Judicial, y pagar la cuota de afiliación correspondiente.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cuáles son los beneficios de ser miembro del sindicato?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
+                        <div class="card-body">
+                            Como miembro del sindicato, tienes acceso a numerosos beneficios, incluyendo préstamos personales, descuentos en establecimientos comerciales, seguro médico complementario, cursos de capacitación, asesoría legal, entre otros. Puedes consultar la lista completa en nuestra sección de <a href="{{ path('app_benefits') }}">Beneficios</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Cómo puedo participar en los eventos del sindicato?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
+                        <div class="card-body">
+                            Para participar en los eventos del sindicato, debes estar afiliado y registrarte para cada evento específico. Puedes hacerlo a través de nuestra aplicación móvil, en nuestras oficinas o en la sección de <a href="{{ path('app_events') }}">Eventos</a> de nuestro sitio web.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -35,6 +35,41 @@ body {
 .contact-icon-movil {
     display: none;
 }
+/* Footer */
+.footer {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+i {
+    vertical-align: middle;
+}
+.text-back {
+    color: #000000;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+.text-footer-snrstpjf {
+    color: #000000;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+.footer-information {
+    padding: 0 0 0 50px;
+}
+.information-icon {
+    width: 30px;
+}
+.logo-footer {
+    width: 120px;
+}
+.footer-social {
+    width: 45px;
+}
+.footer-image:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
 @media (max-width: 575px) {
     /* Navbar */
     .divider {
@@ -51,6 +86,22 @@ body {
     }
     .contact-icon  {
         display: none;
+    }
+    /* Footer */
+    .text-footer-snrstpjf {
+        font-size: 15px;
+    }
+    .footer-information {
+        padding: 0;
+    }
+    .information-icon {
+        width: 22px;
+    }
+    .logo-footer {
+        display: none;
+    }
+    .footer-social {
+        width: 35px;
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -70,6 +121,22 @@ body {
     .contact-icon  {
         display: none;
     }
+    /* Footer */
+    .text-footer-snrstpjf {
+        font-size: 15px;
+    }
+    .footer-information {
+        padding: 0;
+    }
+    .information-icon {
+        width: 22px;
+    }
+    .logo-footer {
+       display: none;
+    }
+    .footer-social {
+        width: 35px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     /* Navbar */
@@ -88,6 +155,22 @@ body {
     .contact-icon  {
         display: none;
     }
+    /* Footer */
+    .text-footer-snrstpjf {
+        font-size: 11px;
+    }
+    .footer-information {
+        padding: 0 0 0 20px;
+    }
+    .information-icon {
+        width: 22px;
+    }
+    .logo-footer {
+        width: 100px;
+    }
+    .footer-social {
+        width: 35px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Navbar */
@@ -97,6 +180,21 @@ body {
     .navbar-brand {
         margin: 0 35px;
     }
+    /* Footer */
+    .text-footer-snrstpjf {
+        font-size: 13px;
+    }
+    .information-icon {
+        width: 25px;
+    }
+    .footer-social {
+        width: 40px;
+    }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {}
+@media (min-width: 1200px) and (max-width: 1400px) {
+    /* Footer */
+    .text-footer-snrstpjf {
+        font-size: 16px;
+    }
+}
 @media (min-width: 1401px) and (max-width: 1900px) {}

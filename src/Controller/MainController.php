@@ -4,13 +4,13 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    /**
-     * @Route("/", name="app_index")
-     */
+    #[Route('/', name: 'app_index')]
     public function index()
     {
         return $this->render('main/index.html.twig', [
@@ -18,9 +18,8 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/about-us", name="app_about_us")
-     */
+
+    #[Route('/about-us', name: 'app_about_us')]
     public function aboutUs()
     {
         return $this->render('main/about_us.html.twig', [
@@ -28,9 +27,7 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/benefits", name="app_benefits")
-     */
+    #[Route('/benefits', name: 'app_benefits')]
     public function benefits()
     {
         return $this->render('main/benefits.html.twig', [
@@ -38,9 +35,7 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/events", name="app_events")
-     */
+    #[Route('/events', name: 'app_events')]
     public function events()
     {
         return $this->render('main/events.html.twig', [
@@ -48,9 +43,7 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/contact", name="app_contact")
-     */
+    #[Route('/contact', name: 'app_contact')]
     public function contact()
     {
         return $this->render('main/contact.html.twig', [
@@ -58,9 +51,7 @@ class MainController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/our-app", name="app_our_app")
-     */
+    #[Route('/our-app', name: 'app_our_app')]
     public function ourApp()
     {
         return $this->render('main/our_app.html.twig', [

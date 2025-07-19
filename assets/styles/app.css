@@ -1,6 +1,6 @@
 /* Global */
 body {
-    background: red;
+    background: #FFFFFF;
     box-sizing: border-box;
     min-height: 100vh;
     overflow-x: hidden;
@@ -8,6 +8,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: "Montserrat", sans-serif;
 }
 /* Navbar */
 .navbar.bg-snrstpjf {
@@ -70,6 +71,112 @@ i {
     transform: scale(1.03);
     cursor: pointer;
 }
+/* Index */
+#home-section {
+    height: 80vh;
+}
+.home-image {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url('../images/hero.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.text-home {
+    padding: 0 100px 0 0;
+}
+.text-home h2 {
+    font-size: 50px;
+}
+.text-home h1 {
+    font-size: 90px;
+}
+.text-home p {
+    font-size: 21px;
+}
+.home-movil {
+    transform: translateY(-150px);
+}
+.image-movil {
+    width: 400px;
+    z-index: 2;
+}
+#represent {
+    margin: 100px 0;
+}
+.bg-represent {
+    background:
+            linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+            url('../images/represent.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+.information-represent {
+    padding: 0 0 0 150px;
+}
+.represent-image{
+    height: 100%;
+}
+.icons-benefits {
+    width: 80px;
+}
+.icons-benefits:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.text-benefits {
+    font-size: 18px;
+}
+.title-benefits  {
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+}
+.title-actions {
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+}
+.bg-card-actions {
+    background: linear-gradient(to right, #CECECE, #FFFFFF);
+    border-radius: 30px;
+}
+.card-img-top {
+    margin: 25px;
+    width: 300px;
+}
+.card-title-actions {
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+}
+#contact-home {
+    background: url('../images/contact-home.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.contact-text-home {
+    font-size: 95px;
+}
+.text-outline {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000
+    ;
+}
+.btn-whi {
+    background-color: #FFFFFF;
+    color: #434343;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 7px 60px;
+}
+
 @media (max-width: 575px) {
     /* Navbar */
     .divider {
@@ -102,6 +209,50 @@ i {
     }
     .footer-social {
         width: 35px;
+    }
+    /* Index */
+    .text-home {
+        padding: 0 10px;
+        transform: translateY(-200px);
+    }
+    .text-home h2 {
+        font-size: 29px;
+    }
+    .text-home h1 {
+        font-size: 38px;
+    }
+    .text-home p {
+        font-size: 15px;
+    }
+    .home-movil {
+        transform: translateY(235px);
+    }
+    .image-movil {
+        width: 220px;
+    }
+    .information-represent {
+        padding: 0 0 0 50px;
+    }
+    .represent-image {
+       display: none;
+    }
+    .title-benefits  {
+        font-size: 30px;
+    }
+    .title-actions {
+        font-size: 30px;
+    }
+    .card-img-top {
+        width: 150px;
+    }
+    .card-title-actions {
+        font-size: 20px;
+    }
+    #contact-home {
+        height: 50vh;
+    }
+    .contact-text-home {
+        font-size: 30px;
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -137,6 +288,50 @@ i {
     .footer-social {
         width: 35px;
     }
+    /* Index */
+    .text-home {
+        padding: 0;
+        transform: translateY(-200px);
+    }
+    .text-home h2 {
+        font-size: 29px;
+    }
+    .text-home h1 {
+        font-size: 38px;
+    }
+    .text-home p {
+        font-size: 15px;
+    }
+    .home-movil {
+        transform: translateY(235px);
+    }
+    .image-movil {
+        width: 220px;
+    }
+    .information-represent {
+        padding: 0 0 0 50px;
+    }
+    .represent-image {
+        height: 50%;
+    }
+    .title-benefits  {
+        font-size: 35px;
+    }
+    .title-actions {
+        font-size: 35px;
+    }
+    .card-img-top {
+        width: 200px;
+    }
+    .card-title-actions {
+        font-size: 25px;
+    }
+    #contact-home {
+        height: 50vh;
+    }
+    .contact-text-home {
+        font-size: 44px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     /* Navbar */
@@ -171,6 +366,49 @@ i {
     .footer-social {
         width: 35px;
     }
+    /* Index */
+    .text-home {
+        padding: 0 40px 0 0;
+    }
+    .text-home h2 {
+        font-size: 29px;
+    }
+    .text-home h1 {
+        font-size: 38px;
+    }
+    .text-home p {
+        font-size: 15px;
+    }
+    .home-movil {
+        transform: translateY(-130px);
+    }
+    .image-movil {
+        width: 300px;
+    }
+    .information-represent {
+        padding: 0 0 0 50px;
+    }
+    .represent-image {
+        height: 70%;
+    }
+    .title-benefits  {
+        font-size: 40px;
+    }
+    .title-actions {
+        font-size: 40px;
+    }
+    .card-img-top {
+        width: 150px;
+    }
+    .card-title-actions {
+        font-size: 20px;
+    }
+    #contact-home {
+        height: 50vh;
+    }
+    .contact-text-home {
+        font-size: 59px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Navbar */
@@ -190,11 +428,78 @@ i {
     .footer-social {
         width: 40px;
     }
+    /* Index */
+    .text-home {
+        padding: 0 65px 0 0;
+    }
+    .text-home h2 {
+        font-size: 29px;
+    }
+    .text-home h1 {
+        font-size: 48px;
+    }
+    .text-home p {
+        font-size: 13px;
+    }
+    .image-movil {
+        width: 330px;
+    }
+    .information-represent {
+        padding: 0 0 0 50px;
+    }
+    .represent-image {
+        height: 80%;
+    }
+    .title-benefits  {
+        font-size: 45px;
+    }
+    .text-actions {
+        font-size: 45px;
+    }
+    .card-img-top {
+        width: 200px;
+    }
+    .card-title-actions {
+        font-size: 28px;
+    }
+    .contact-text-home {
+        font-size: 80px;
+    }
 }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
     /* Footer */
     .text-footer-snrstpjf {
         font-size: 16px;
     }
+    /* Index */
+    .text-home h2 {
+        font-size: 33px;
+    }
+    .text-home h1 {
+        font-size: 56px;
+    }
+    .text-home p {
+        font-size: 13px;
+    }
+    .image-movil {
+        width: 350px;
+    }
+    .card-title-actions {
+        font-size: 30px;
+    }
 }
-@media (min-width: 1401px) and (max-width: 1900px) {}
+@media (min-width: 1400px) {
+    /* Index */
+    .text-home h2 {
+        font-size: 40px;
+    }
+    .text-home h1 {
+        font-size: 68px;
+    }
+    .text-home p {
+        font-size: 16px;
+    }
+    .image-movil {
+        width: 350px;
+    }
+}

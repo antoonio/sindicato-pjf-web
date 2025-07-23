@@ -1,70 +1,94 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Sobre Nosotros - Sindicato PJF{% endblock %}
+{% block title %}Nosotros{% endblock %}
 
 {% block body %}
-<div class="container mt-4">
-    <h1>Sobre Nosotros</h1>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ path('app_index') }}">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Sobre Nosotros</li>
-        </ol>
-    </nav>
-    
-    <div class="row mt-4">
-        <div class="col-md-8">
-            <h2>Nuestra Historia</h2>
-            <p>El Sindicato del Poder Judicial de la Federación fue fundado con el propósito de representar y defender los derechos laborales de todos los trabajadores del Poder Judicial.</p>
-            
-            <p>A lo largo de nuestra historia, hemos trabajado incansablemente para mejorar las condiciones laborales, promover la capacitación continua y fomentar un ambiente de trabajo justo y equitativo.</p>
-            
-            <h2 class="mt-4">Misión</h2>
-            <p>Nuestra misión es representar y defender los intereses laborales, económicos y sociales de los trabajadores del Poder Judicial de la Federación, promoviendo su desarrollo profesional y personal.</p>
-            
-            <h2 class="mt-4">Visión</h2>
-            <p>Ser un sindicato líder, reconocido por su compromiso con la justicia, la transparencia y la defensa efectiva de los derechos de sus agremiados, contribuyendo al fortalecimiento del sistema judicial mexicano.</p>
-            
-            <h2 class="mt-4">Valores</h2>
-            <ul>
-                <li><strong>Integridad:</strong> Actuamos con honestidad y ética en todas nuestras acciones.</li>
-                <li><strong>Solidaridad:</strong> Trabajamos unidos por el bienestar común de todos nuestros agremiados.</li>
-                <li><strong>Transparencia:</strong> Mantenemos una comunicación clara y abierta sobre nuestras actividades y decisiones.</li>
-                <li><strong>Compromiso:</strong> Nos dedicamos plenamente a la defensa de los derechos de nuestros miembros.</li>
-                <li><strong>Respeto:</strong> Valoramos la diversidad de opiniones y promovemos un trato digno para todos.</li>
-            </ul>
+    <section id="header-snrstpjf">
+        <div class="text-white text-center bg-header-aus">
+            <h2 class="m-0 header-text">NOSOTROS</h2>
         </div>
-        
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    Directiva Actual
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center mb-3 mb-md-0">
+                    <img src="{{ asset('build/images/about_us/alberto-prado.png') }}" alt="Alberto Prado" class="img-fluid rounded">
                 </div>
-                <div class="card-body">
-                    <p><strong>Presidente:</strong> [Nombre del Presidente]</p>
-                    <p><strong>Secretario General:</strong> [Nombre del Secretario]</p>
-                    <p><strong>Tesorero:</strong> [Nombre del Tesorero]</p>
-                    <p><strong>Vocales:</strong></p>
-                    <ul>
-                        <li>[Nombre del Vocal 1]</li>
-                        <li>[Nombre del Vocal 2]</li>
-                        <li>[Nombre del Vocal 3]</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="card mt-4">
-                <div class="card-header bg-success text-white">
-                    Contáctanos
-                </div>
-                <div class="card-body">
-                    <p><i class="fas fa-map-marker-alt"></i> [Dirección de la sede]</p>
-                    <p><i class="fas fa-phone"></i> [Número de teléfono]</p>
-                    <p><i class="fas fa-envelope"></i> [Correo electrónico]</p>
-                    <a href="{{ path('app_contact') }}" class="btn btn-primary">Formulario de Contacto</a>
+                <div class="col-md-7">
+                    <h4 class="mb-1-0 subtitle-snrstpjf">ALBERTO PRADO GÓMEZ</h4>
+                    <p class="text-snrstpjf m-0">Secretario General del Sindicato Nacional de Renovación. Ex integrante de la Presidencia Nacional del Sindicato de los Trabajadores del Poder Judicial.</p>
+                    <p class="text-snrstpjf m-0">Es Licenciado en Derecho y cuenta con una sólida trayectoria de más de 20 años en el Poder Judicial.</p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <section>
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-snrstpjf h-100 d-flex flex-column">
+                        <div class="p-4 flex-grow-1">
+                            <h5 class="subtitle-snrstpjf m-0">NUESTRO DÍA</h5>
+                            <p class="text-snrstpjf m-0"><strong>(MISIÓN)</strong></p>
+                            <p class="text-snrstpjf m-0">
+                                Representar con hechos a las y los trabajadores del Poder Judicial,
+                                asegurando sus derechos, su estabilidad y un uso justo ante sus trabajadores.
+                            </p>
+                        </div>
+                        <div class="image-wrapper-au">
+                            <img src="{{ asset('build/images/about_us/our-day.jpg') }}" alt="Nuestro Día" class="imge-cover-au">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-snrstpjf h-100 d-flex flex-column">
+                        <div class="image-wrapper-au">
+                            <img src="{{ asset('build/images/about_us/our-tomorrow.jpg') }}" alt="Nuestro Mañana" class="imge-cover-au">
+                        </div>
+                        <div class="p-4 flex-grow-1 text-end">
+                            <h5 class="subtitle-snrstpjf m-0">NUESTRO MAÑANA</h5>
+                            <p class="text-snrstpjf m-0"><strong>(VISIÓN)</strong></p>
+                            <p class="text-snrstpjf m-0">
+                                Ser un sindicato moderno, fuerte y confiable, que vele por el bienestar de las y los trabajadores del país.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <h4 class="text-center subtitle-snrstpjf mb-4">NUESTRA POSTURA ANTE PJF</h4>
+            <p class="text-center text-snrstpjf mb-4">En el Sindicato de Renovación creemos en el cambio, pero no en retroceder. La Reforma Judicial debe buscar construir mejores condiciones laborales, no destruir lo que se ha conseguido. Como sindicato confiamos, pero no dejamos de luchar por lo que nos pertenece.</p>
+            <div class="row justify-content-center text-white text-center">
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
+                        <img src="{{ asset('build/images/icons/training.svg') }}" alt="Capacitación" class="icons-stance">
+                        <p class="text-snrstpjf mt-1 mb-0">Sí a la capacitación.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
+                        <img src="{{ asset('build/images/icons/professionalization.svg') }}" alt="Profesionalización" class="icons-stance">
+                        <p class="text-snrstpjf mt-1 mb-0">Sí a la profesionalización.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-3">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
+                        <img src="{{ asset('build/images/icons/rights.svg') }}" alt="Derechos" class="icons-stance">
+                        <p class="text-snrstpjf mt-1 mb-0">No a perder nuestros derechos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="represent-aus">
+        <div class="container represent-content text-white text-center">
+            <p class="m-0 subtitle-snrstpjf">La estabilidad es un derecho, no un privilegio.<br>Seguiremos alzando la voz, porque defender al trabajador es defender la justicia.</p>
+        </div>
+    </section>
 {% endblock %}

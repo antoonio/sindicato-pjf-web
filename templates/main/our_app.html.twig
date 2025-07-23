@@ -1,225 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nuestra App - Sindicato PJF{% endblock %}
+{% block title %}Nuestra App{% endblock %}
 
 {% block body %}
-<div class="container mt-4">
-    <h1>Nuestra Aplicación Móvil</h1>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ path('app_index') }}">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Nuestra App</li>
-        </ol>
-    </nav>
-    
-    <div class="alert alert-success mt-3">
-        <p class="mb-0">¡Descarga nuestra aplicación móvil y lleva el sindicato contigo a todas partes! Accede a todos nuestros servicios desde la comodidad de tu teléfono.</p>
-    </div>
-    
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Características de la App</h5>
+    <section id="header-snrstpjf">
+        <div class="text-white text-center bg-header-app">
+            <h2 class="m-0 header-text">NUESTRA APLICACIÓN</h2>
+        </div>
+    </section>
+
+    <section class="app-promo">
+        <div class="section-diagonal bg-green">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <div>
+                    <p class="subtitle-snrstpjf text-white fw-bold text-end">ENTÉRATE DE <br> LAS NOVEDADES</p>
                 </div>
-                <div class="card-body">
-                    <div class="row mb-4">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-user-circle fa-3x text-primary"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Perfil de Usuario</h5>
-                            <p>Accede a tu información personal, credencial digital y estado de cuenta de tus beneficios.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-4">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-calendar-alt fa-3x text-success"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Calendario de Eventos</h5>
-                            <p>Consulta y regístrate en los próximos eventos del sindicato directamente desde tu teléfono.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-4">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-file-alt fa-3x text-info"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Trámites en Línea</h5>
-                            <p>Realiza solicitudes de préstamos, constancias y otros trámites sin necesidad de acudir a nuestras oficinas.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-4">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-bell fa-3x text-warning"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Notificaciones</h5>
-                            <p>Recibe alertas sobre eventos importantes, noticias y actualizaciones del sindicato.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-4">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-comments fa-3x text-danger"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Chat de Soporte</h5>
-                            <p>Comunícate directamente con nuestro equipo de atención a través del chat integrado.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-2 text-center">
-                            <i class="fas fa-percent fa-3x text-secondary"></i>
-                        </div>
-                        <div class="col-10">
-                            <h5>Descuentos y Promociones</h5>
-                            <p>Accede a cupones digitales exclusivos para afiliados en establecimientos asociados.</p>
-                        </div>
-                    </div>
+                <div>
+                    <img src="{{ asset('build/images/our_app/phone_01.png') }}" class="app-img" alt="Novedades">
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-6">
-            <div class="card mb-4">
-                <div class="card-header bg-success text-white">
-                    <h5 class="mb-0">Descarga la App</h5>
-                </div>
-                <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/300x500?text=App+Screenshot" class="img-fluid mb-4 rounded" alt="Screenshot de la aplicación">
-                    
-                    <p class="lead">Disponible para iOS y Android</p>
-                    
-                    <div class="row justify-content-center">
-                        <div class="col-6">
-                            <a href="#" class="btn btn-dark btn-lg btn-block mb-2">
-                                <i class="fab fa-apple mr-2"></i> App Store
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="btn btn-success btn-lg btn-block mb-2">
-                                <i class="fab fa-android mr-2"></i> Google Play
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <p>Escanea el código QR para descargar:</p>
-                        <img src="https://via.placeholder.com/150?text=QR+Code" class="img-fluid" alt="Código QR">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-header bg-info text-white">
-                    <h5 class="mb-0">Opiniones de Usuarios</h5>
-                </div>
-                <div class="card-body">
-                    <div class="media mb-3">
-                        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Usuario">
-                        <div class="media-body">
-                            <h5 class="mt-0">María Rodríguez</h5>
-                            <div class="text-warning mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>"La app es muy intuitiva y me ha facilitado mucho los trámites. Ya no tengo que ir a las oficinas para solicitar constancias o préstamos."</p>
-                        </div>
-                    </div>
-                    
-                    <div class="media mb-3">
-                        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Usuario">
-                        <div class="media-body">
-                            <h5 class="mt-0">Carlos Méndez</h5>
-                            <div class="text-warning mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <p>"Me encanta poder ver todos los eventos programados y registrarme directamente desde mi teléfono. La función de notificaciones es muy útil."</p>
-                        </div>
-                    </div>
-                    
-                    <div class="media">
-                        <img src="https://via.placeholder.com/64" class="mr-3 rounded-circle" alt="Usuario">
-                        <div class="media-body">
-                            <h5 class="mt-0">Laura Vázquez</h5>
-                            <div class="text-warning mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p>"El chat de soporte es excelente, siempre responden rápido y resuelven mis dudas. Además, los descuentos exclusivos para afiliados son geniales."</p>
-                        </div>
-                    </div>
-                </div>
+
+        <div class="section-diagonal-left bg-gray">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <img src="{{ asset('build/images/our_app/phone_02.png') }}" class="app-img" alt="Eventos">
+                <p class="subtitle-snrstpjf text-white fw-bold text-start">TE RECORDAMOS LOS <br> PRÓXIMOS EVENTOS</p>
             </div>
         </div>
-    </div>
-    
-    <div class="card mt-4 mb-4">
-        <div class="card-header bg-primary text-white">
-            <h5 class="mb-0">Preguntas Frecuentes sobre la App</h5>
-        </div>
-        <div class="card-body">
-            <div class="accordion" id="accordionFAQ">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                ¿Cómo puedo descargar la aplicación?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFAQ">
-                        <div class="card-body">
-                            Puedes descargar la aplicación desde la App Store si tienes un dispositivo iOS, o desde Google Play si tienes un dispositivo Android. También puedes escanear el código QR que aparece en esta página para ir directamente a la tienda correspondiente.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                ¿Necesito estar afiliado para usar la app?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
-                        <div class="card-body">
-                            No es necesario estar afiliado para descargar y usar algunas funciones básicas de la app, como consultar información general o eventos públicos. Sin embargo, para acceder a todas las funcionalidades como trámites en línea, descuentos exclusivos y tu perfil personal, sí necesitas ser afiliado al sindicato.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                ¿Es seguro realizar trámites a través de la app?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
-                        <div class="card-body">
-                            Sí, nuestra aplicación cuenta con altos estándares de seguridad. Utilizamos encriptación de datos y autenticación de dos factores para proteger tu información personal. Además, no almacenamos datos sensibles como números de tarjetas de crédito en la aplicación.
-                        </div>
-                    </div>
-                </div>
+
+        <div class="section-diagonal bg-red">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <p class="subtitle-snrstpjf text-white fw-bold text-end">TUS DATOS Y LOS DE TUS  <br> FAMILIARES AL ALCANCE</p>
+                <img src="{{ asset('build/images/our_app/phone_03.png') }}" class="app-img" alt="Datos">
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="section-diagonal-left  bg-green">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <img src="{{ asset('build/images/our_app/phone_04.png') }}" class="app-img" alt="Beneficios">
+                <p class="subtitle-snrstpjf text-white fw-bold text-start">MOSTRAMOS A DETALLE <br> TUS BENEFICIOS</p>
+            </div>
+        </div>
+
+        <div class="section-diagonal bg-gray">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <p class="subtitle-snrstpjf text-white fw-bold text-end">CON TODOS TUS <br> DOCUMENTOS A LA MANO</p>
+                <img src="{{ asset('build/images/our_app/phone_05.png') }}" class="app-img" alt="Documentos">
+            </div>
+        </div>
+
+        <div class="section-diagonal-left  bg-red">
+            <div class="container d-flex flex-row align-items-center justify-content-center text-center">
+                <img src="{{ asset('build/images/our_app/phone_06.png') }}" class="app-img" alt="Seguridad">
+                <p class="subtitle-snrstpjf text-white fw-bold text-start">Y CON SEGURIDAD <br> GARANTIZADA</p>
+            </div>
+        </div>
+
+        <div class="download-app text-white d-flex flex-row align-items-center justify-content-center">
+            <div class="col-md-3 d-flex justify-content-center">
+                <img src="{{ asset('build/images/our_app/phone_07.png') }}" class="image-download-app" alt="Logo App">
+            </div>
+            <div class="col-md-9">
+                <p class="fw-bold m-0 text-start text-outline">NO TE QUEDES ATRÁS <br> ¡DESCARGA NUESTRA APP!</p>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}

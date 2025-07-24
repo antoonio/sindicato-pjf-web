@@ -310,7 +310,36 @@ i {
 }
 .image-download-app {
     width: 200px;
-
+}
+/* Contact */
+.bg-header-contact {
+    background:
+            linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+            url('../images/contact/header-background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    padding: 70px 0;
+    margin: 15px 100px;
+}
+.form-snrstpjf {
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+#submit-btn {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+}
+.location-text {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    color: #939393;
+    font-weight: bold;
+}
+.form-field {
+    margin-bottom: 18px;
 }
 @media (max-width: 575px) {
     /* Global */
@@ -440,6 +469,23 @@ i {
         height: 25vh;
         margin: 80px 0;
     }
+    /* Contact */
+    .bg-header-contact {
+        padding: 35px 0;
+        margin: 15px;
+    }
+    .location-text {
+        font-size: 13px;
+    }
+    #submit-btn {
+        font-size: 15px;
+    }
+    .map-snrstpjf {
+        margin-top: 40px;
+    }
+    .form-field {
+        margin-bottom: 0px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px) {
     /* Global */
@@ -563,6 +609,23 @@ i {
     .bg-red {
         height: 30vh;
     }
+    /* Contact */
+    .bg-header-contact {
+        padding: 45px 0;
+        margin: 15px 45px;
+    }
+    .location-text {
+        font-size: 13px;
+    }
+    #submit-btn {
+        font-size: 17px;
+    }
+    .map-snrstpjf {
+        margin-top: 40px;
+    }
+    .form-field {
+        margin-bottom: 0px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     /* Global */
@@ -683,6 +746,20 @@ i {
     .bg-red {
         height: 40vh;
     }
+    /* Contact */
+    .bg-header-contact {
+        padding: 50px 0;
+        margin: 15px 70px;
+    }
+    .location-text {
+        font-size: 13px;
+    }
+    #submit-btn {
+        font-size: 17px;
+    }
+    .map-snrstpjf {
+        margin-top: 40px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Global */
@@ -756,6 +833,16 @@ i {
     /* Our app */
     .bg-header-app {
         padding: 60px 0;
+    }
+    /* Contact */
+    .bg-header-contact {
+        padding: 60px 0;
+    }
+    .location-text {
+        font-size: 13px;
+    }
+    #submit-btn {
+        font-size: 17px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {

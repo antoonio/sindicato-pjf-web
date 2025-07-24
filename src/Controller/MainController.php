@@ -7,6 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use App\Form\ContactType;
+use App\Entity\Contact;
 
 class MainController extends AbstractController
 {
@@ -44,10 +48,33 @@ class MainController extends AbstractController
     }
 
     #[Route('/contact', name: 'app_contact')]
-    public function contact()
+    public function contact(Request $request, MailerInterface $mailer): Response
     {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $task = $form->getData();
+
+            $email = (new Email())
+                ->from('duloposmx@gmail.com')
+                ->replyTo($task->getEmail())
+                ->to('duloposmx@gmail.com')
+                ->subject('Contacto | renovacionsindicalcjf.com')
+                ->text("Nuevo mensaje:\nNombre: {$task->getName()}\nApellidos: {$task->getLastname()}\nCorreo electrónico: {$task->getEmail()}\nTeléfono: {$task->getPhone()}\nMensaje: {$task->getMessage()}")
+            ;
+
+            $mailer->send($email);
+
+            $this->addFlash('success', 'Tu mensaje ha sido enviado exitosamente.');
+
+            return $this->redirectToRoute('app_contact');
+        }
+
         return $this->render('main/contact.html.twig', [
-            'controller_name' => 'MainController',
+            'form' => $form->createView()
         ]);
     }
 

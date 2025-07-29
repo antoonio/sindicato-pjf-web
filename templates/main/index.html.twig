@@ -9,15 +9,15 @@
         <div class="container-fluid h-100 position-relative z-1">
             <div class="row h-100 align-items-center justify-content-center">
                 {# MOCKUP + BOTÓN ENCIMA #}
-                <div class="home-movil col-md-5 position-relative d-flex justify-content-center mb-5 mb-md-0">
+                <!--<div class="home-movil col-md-5 position-relative d-flex justify-content-center mb-5 mb-md-0">
                     <a href="{{ path('app_our_app') }}" class="position-absolute text-white text-decoration-none d-flex flex-row align-items-center mb-5">
                         <span class="px-3 py-1 shadow-sm small fw-semibold">CONOCE NUESTRA APP</span>
                         <img src="{{ asset('build/images/icons/go-app.svg') }}" alt="Click" width="35" class="mt-1">
                     </a>
                     <img src="{{ asset('build/images/mockup.png') }}" alt="Mockup app" class="img-fluid mt-5 position-absolute image-movil">
-                </div>
+                </div>-->
 
-                <div class="col-md-7 text-md-end text-center text-home">
+                <div class="col-md-12 text-md-end text-center text-home">
                     <h2 class="fw-light">Bienvenidos a</h2>
                     <h1 class="display-3 fw-bold text-white">Renovación Sindical</h1>
                     <p class="lead mt-3">Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal</p>
@@ -26,31 +26,40 @@
         </div>
     </section>
 
-    <section id="represent" class="py-5 ">
-        <div class="-fluid">
-            <div class="row align-items-center">
-                <div class="bg-represent text-white d-flex position-relative overflow-visible">
-                    <div class="col-md-8 d-flex flex-column justify-content-center align-items-start information-represent">
-                        <h2 class="fw-bold mb-3 title-benefits">LO QUE REPRESENTAMOS</h2>
-                        <ul class="list-unstyled">
-                            <li>● Defensa Sindical real y eficaz</li>
-                            <li>● Protección de tus derechos laborales</li>
-                            <li>● Participación directa en la toma de decisiones</li>
-                            <li>● Garantía de imparcialidad y transparencia</li>
-                            <li>● Cuotas sindicales útiles para ti</li>
-                        </ul>
-                        <a href="#" class="btn btn-whi mt-3 shadow">VER MÁS</a>
-                    </div>
+    <section id="represent" class="py-5 position-relative">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Bloque de fondo bandera con texto -->
+                <div class="col-md-12 position-relative bg-represent text-white p-5 overflow-hidden">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h2 class="fw-bold mb-4 title-benefits">LO QUE REPRESENTAMOS</h2>
+                            <ul class="text-snrstpjf list-unstyled fs-5">
+                                <li>● Presencia Sindical real y cercana.</li>
+                                <li>● Defensa digna del trabajo judicial.</li>
+                                <li>● Respaldo a la confianza de los trabajadores.</li>
+                                <li>● Atención rápida a demandas laborales.</li>
+                                <li>● Sindicalismo renovado y transparente.</li>
+                                <li>● Cuidando tu familia, tu futuro y tu país.</li>
+                            </ul>
+                            <a href="{{ path('app_about_us') }}" class="btn btn-light mt-4 px-4 py-2 rounded-pill fw-bold shadow-sm">VER MÁS</a>
+                        </div>
 
-                    <div class="col-md-4 d-flex flex-column justify-content-center">
-                        <img src="{{ asset('build/images/representamos.png') }}" alt="Representamos" class="img-fluid  represent-image">
+                        <!-- Imagen decorativa -->
+                        <div class="col-md-4 d-none d-md-block position-relative">
+                            <img src="{{ asset('build/images/representamos.png') }}"
+                                 class="represent-image position-absolute end-0 top-50 translate-middle-y rounded-4 shadow"
+                                 alt="Representamos"
+                                 style="width: 500px; z-index: 1;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 text-white" style="background-color: #6b8e23;">
+
+    <section class="py-5 text-white mb-5" style="background-color: #6b8e23;">
         <div class="container text-center">
             <h2 class="fw-bold title-benefits">LO QUE OFRECEMOS</h2>
             <div class="row justify-content-around">
@@ -75,11 +84,11 @@
                     <p class="mt-2 text-benefits">Ayuda para diversos servicios</p>
                 </div>
             </div>
-            <a href="#" class="btn btn-whi mt-3 shadow">VER MÁS</a>
+            <a href="{{ path('app_benefits') }}" class="btn btn-whi mt-3 shadow">VER MÁS</a>
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5 mt-5">
         <div class="container">
             <h2 class="fw-bold text-center title-actions mb-4">NUESTRAS ACCIONES</h2>
             <div class="row g-4">
@@ -124,7 +133,7 @@
     <section id="contact-home" class="text-white text-start d-flex align-items-center">
         <div class="container">
             <h2 class="display-6 fw-bold contact-text-home text-outline">TODOS SOMOS UNO<br>Y UNO SOMOS TODOS</h2>
-            <a href="#" class="btn btn-whi mt-3 shadow">¡ÚNETE!</a>
+            <a href="{{ path('app_contact') }}" class="btn btn-whi mt-3 shadow">¡ÚNETE!</a>
         </div>
     </section>
 {% endblock %}

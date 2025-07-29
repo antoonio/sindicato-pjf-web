@@ -111,8 +111,8 @@ i {
 }
 .home-image {
     background:
-        linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-        url('../images/hero.jpg');
+        linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+        url('../images/hero.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -143,16 +143,20 @@ i {
     background:
             linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
             url('../images/represent.jpg');
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh;
 }
 .information-represent {
     padding: 0 0 0 150px;
 }
 .represent-image{
-    height: 100%;
+    top: 30%;
+    right: 3%;
+    width: 380px;
+    z-index: 0;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 .icons-benefits {
     width: 80px;

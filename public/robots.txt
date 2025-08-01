@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://renovacionsindicalcjf.com/sitemap.xml
+
+# Disallow admin areas if they exist
+Disallow: /admin/
+Disallow: /login

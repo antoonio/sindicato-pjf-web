@@ -1,8 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block meta_description %}Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal. Representación sindical, apoyo laboral y asesoramiento para trabajadores del poder judicial.{% endblock %}">
+        <meta name="keywords" content="{% block meta_keywords %}sindicato, poder judicial, trabajadores judiciales, renovación sindical, apoyo laboral, México{% endblock %}">
+        <meta name="author" content="Sindicato Nacional de Renovación">
+        <meta name="robots" content="index, follow">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
+        <meta property="og:title" content="{% block og_title %}{{ block('title') }} | renovacionsindicalcjf.com{% endblock %}">
+        <meta property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}">
+        <meta property="og:image" content="{{ absolute_url(asset('build/images/logo.svg')) }}">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
+        <meta name="twitter:title" content="{% block twitter_title %}{{ block('title') }} | renovacionsindicalcjf.com{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}{{ block('meta_description') }}{% endblock %}">
+        <meta name="twitter:image" content="{{ absolute_url(asset('build/images/logo.svg')) }}">
+
+        <link rel="canonical" href="{{ app.request.schemeAndHttpHost ~ app.request.requestUri }}">
 
         <title>{% block title %}Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal{% endblock %} | renovacionsindicalcjf.com</title>
 
@@ -40,6 +60,23 @@
                     mirror: false
                 });
             });
+        </script>
+
+        <!-- Structured Data / JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal",
+            "alternateName": "Renovación Sindical",
+            "url": "{{ app.request.schemeAndHttpHost }}",
+            "logo": "{{ absolute_url(asset('build/images/logo.svg')) }}",
+            "description": "Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal. Representación sindical, apoyo laboral y asesoramiento para trabajadores del poder judicial.",
+            "sameAs": [
+                "https://www.facebook.com/p/Sindicato-Nacional-de-Renovaci%C3%B3n-al-Servicio-de-los-Trabajadores-del-PJF-100064742674436/",
+                "https://x.com/SNRSTPJF"
+            ]
+        }
         </script>
     </head>
     <body>

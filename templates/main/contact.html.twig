@@ -8,20 +8,20 @@
 {% endblock %}
 
 {% block body %}
-    <section id="header-snrstpjf">
-        <div class="text-white text-center bg-header-contact">
-            <h2 class="m-0 header-text">CONTACTO</h2>
+    <section id="header-snrstpjf" class="parallax-section">
+        <div class="text-white text-center bg-header-contact parallax-bg">
+            <h2 class="m-0 header-text animate-text" data-aos="fade-up" data-aos-delay="200">CONTACTO</h2>
         </div>
     </section>
 
-    <section>
+    <section id="contact-snrstpjf">
         <div class="container py-5">
             <div class="row align-items-stretch">
                 <div class="col-lg-8 d-flex flex-column">
-                    <h3 class="text-uppercase subtitle-snrstpjf mb-4 text-center">Comunícate con nosotros</h3>
+                    <h3 class="text-uppercase subtitle-snrstpjf mb-4 text-center animate-title" data-aos="fade-down" data-aos-delay="200">Comunícate con nosotros</h3>
 
                     {{ form_start(form, {'attr': {'id': 'contact-form', 'class': 'flex-grow-1 d-flex flex-column'}}) }}
-                        <div class="row form-field">
+                        <div class="row form-field" data-aos="fade-right" data-aos-delay="300">
                             <div class="col-md-6 mb-3">
                                 {{ form_widget(form.name) }}
                             </div>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
 
-                        <div class="row form-field">
+                        <div class="row form-field" data-aos="fade-left" data-aos-delay="400">
                             <div class="col-md-6 mb-3">
                                 {{ form_widget(form.email) }}
                             </div>
@@ -39,30 +39,31 @@
                             </div>
                         </div>
 
-                        <div class="row form-field">
+                        <div class="row form-field" data-aos="fade-up" data-aos-delay="500">
                             <div class="col-12 mb-3">
                                 {{ form_widget(form.message) }}
                             </div>
                         </div>
 
-                        <div class="col-12 text-center">
+                        <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="600">
                             <button type="submit" id="submit-btn" class="fw-bold custom-button btn btn-dark rounded-pill px-5">ENVIAR</button>
                         </div>
                     {{ form_end(form) }}
                 </div>
 
                 <div class="col-lg-4 d-flex flex-column justify-content-between map-snrstpjf">
-                    <div class="ratio ratio-4x3 shadow rounded-5 mb-3 flex-grow-1">
+                    <div class="ratio ratio-4x3 shadow rounded-5 mb-3 flex-grow-1 map-container" data-aos="fade-left" data-aos-delay="400">
                         <iframe
                                 src="https://www.google.com/maps?q=Río+Misisipi+50,+Cuauhtémoc,+CDMX&output=embed"
                                 frameborder="0"
                                 allowfullscreen
-                                style="border:0; width: 100%; height: 100%;">
+                                style="border:0; width: 100%; height: 100%;"
+                                class="map-frame">
                         </iframe>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center gap-2">
-                        <img src="{{ asset('build/images/icons/location.svg') }}" alt="Icono de ubicación">
-                        <p class="mb-0 location-text text-muted text-start">
+                    <div class="d-flex align-items-center justify-content-center gap-2" data-aos="fade-up" data-aos-delay="600">
+                        <img src="{{ asset('build/images/icons/location.svg') }}" alt="Icono de ubicación" class="location-icon icon-pulse">
+                        <p class="mb-0 location-text text-muted text-start animate-text">
                             Río Misisipi 50, Cuauhtémoc, 06500<br>
                             Ciudad de México, CDMX (3er Piso)
                         </p>

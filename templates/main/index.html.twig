@@ -3,9 +3,8 @@
 {% block title %}Inicio{% endblock %}
 
 {% block body %}
-    <section id="home-section" class="position-relative text-white overflow-visible">
-        <div class="home-image position-absolute top-0 start-0 w-100 h-100"></div>
-
+    <section id="home-section" class="position-relative text-white overflow-hidden">
+        <div class="home-image position-absolute top-0 start-0 w-100 h-100 parallax-bg"></div>
         <div class="container-fluid h-100 position-relative z-1">
             <div class="row h-100 align-items-center justify-content-center">
                 {# MOCKUP + BOTÓN ENCIMA #}
@@ -17,10 +16,10 @@
                     <img src="{{ asset('build/images/mockup.png') }}" alt="Mockup app" class="img-fluid mt-5 position-absolute image-movil">
                 </div>-->
 
-                <div class="col-md-12 text-md-end text-center text-home">
-                    <h2 class="fw-light">Bienvenidos a</h2>
-                    <h1 class="display-3 fw-bold text-white">Renovación Sindical</h1>
-                    <p class="lead mt-3">Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal</p>
+                <div class="col-md-12 text-md-end text-center text-home" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="fw-light animate-text">Bienvenidos a</h2>
+                    <h1 class="display-3 fw-bold text-white animate-text">Renovación Sindical</h1>
+                    <p class="lead mt-3 animate-text">Sindicato Nacional de Renovación al Servicio de los Trabajadores del Poder Judicial Federal</p>
                 </div>
             </div>
         </div>
@@ -30,23 +29,23 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Bloque de fondo bandera con texto -->
-                <div class="col-md-12 position-relative bg-represent text-white p-5 overflow-hidden">
+                <div class="col-md-12 position-relative bg-represent text-white p-5 overflow-hidden" data-aos="fade-up">
                     <div class="row align-items-center">
-                        <div class="col-md-8">
-                            <h2 class="fw-bold mb-4 title-benefits">LO QUE REPRESENTAMOS</h2>
+                        <div class="col-md-8" data-aos="fade-right" data-aos-delay="200">
+                            <h2 class="fw-bold mb-4 title-benefits animate-title">LO QUE REPRESENTAMOS</h2>
                             <ul class="text-snrstpjf list-unstyled text-start fs-5">
-                                <li>● Presencia Sindical real y cercana.</li>
-                                <li>● Defensa digna del trabajo judicial.</li>
-                                <li>● Respaldo a la confianza de los trabajadores.</li>
-                                <li>● Atención rápida a demandas laborales.</li>
-                                <li>● Sindicalismo renovado y transparente.</li>
-                                <li>● Cuidando tu familia, tu futuro y tu país.</li>
+                                <li data-aos="fade-left" data-aos-delay="300">● Presencia Sindical real y cercana.</li>
+                                <li data-aos="fade-left" data-aos-delay="400">● Defensa digna del trabajo judicial.</li>
+                                <li data-aos="fade-left" data-aos-delay="500">● Respaldo a la confianza de los trabajadores.</li>
+                                <li data-aos="fade-left" data-aos-delay="600">● Atención rápida a demandas laborales.</li>
+                                <li data-aos="fade-left" data-aos-delay="700">● Sindicalismo renovado y transparente.</li>
+                                <li data-aos="fade-left" data-aos-delay="800">● Cuidando tu familia, tu futuro y tu país.</li>
                             </ul>
-                            <a href="{{ path('app_about_us') }}" class="btn btn-whi mt-3 shadow">VER MÁS</a>
+                            <a href="{{ path('app_about_us') }}" class="btn btn-whi mt-3 shadow btn-hover">VER MÁS</a>
                         </div>
 
                         <!-- Imagen decorativa -->
-                        <div class="col-md-4 d-none d-md-block position-relative">
+                        <div class="col-md-4 d-none d-md-block position-relative" data-aos="fade-left" data-aos-delay="300">
                             <img src="{{ asset('build/images/representamos.png') }}"
                                  class="represent-image position-absolute end-0 top-50 translate-middle-y rounded-4 shadow"
                                  alt="Representamos">
@@ -58,70 +57,70 @@
     </section>
 
 
-    <section class="py-5 text-white mb-5" style="background-color: #6b8e23;">
+    <section class="py-5 text-white mb-5" style="background-color: #6b8e23;" data-aos="fade-up">
         <div class="container text-center">
-            <h2 class="fw-bold title-benefits">LO QUE OFRECEMOS</h2>
+            <h2 class="fw-bold title-benefits animate-title" data-aos="fade-down" data-aos-delay="200">LO QUE OFRECEMOS</h2>
             <div class="row justify-content-around">
-                <div class="col-6 col-lg-2 mb-4">
-                    <img src="{{ asset('build/images/representacion.svg') }}" alt="Representación sindical Gestoría" class="icons-benefits">
+                <div class="col-6 col-lg-2 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="{{ asset('build/images/representacion.svg') }}" alt="Representación sindical Gestoría" class="icons-benefits icon-pulse">
                     <p class="mt-2 text-benefits">Representación sindical Gestoría</p>
                 </div>
-                <div class="col-6 col-lg-2 mb-4">
-                    <img src="{{ asset('build/images/problematica.svg') }}" alt="Apoyo a problemática laboral" class="icons-benefits">
+                <div class="col-6 col-lg-2 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="{{ asset('build/images/problematica.svg') }}" alt="Apoyo a problemática laboral" class="icons-benefits icon-pulse">
                     <p class="mt-2 text-benefits">Apoyo a problemática laboral</p>
                 </div>
-                <div class="col-6 col-lg-2 mb-4">
-                    <img src="{{ asset('build/images/asesoramiento.svg') }}" alt="Asesoramiento sobre el poder judicial de la federación" class="icons-benefits">
+                <div class="col-6 col-lg-2 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="{{ asset('build/images/asesoramiento.svg') }}" alt="Asesoramiento sobre el poder judicial de la federación" class="icons-benefits icon-pulse">
                     <p class="mt-2 text-benefits">Asesoramiento sobre el poder judicial de la federación</p>
                 </div>
-                <div class="col-6 col-lg-2 mb-4">
-                    <img src="{{ asset('build/images/prestaciones.svg') }}" alt="Apoyo a la agilización de prestaciones" class="icons-benefits">
+                <div class="col-6 col-lg-2 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="{{ asset('build/images/prestaciones.svg') }}" alt="Apoyo a la agilización de prestaciones" class="icons-benefits icon-pulse">
                     <p class="mt-2 text-benefits">Apoyo a la agilización de prestaciones</p>
                 </div>
-                <div class="col-6 col-lg-2 mb-4">
-                    <img src="{{ asset('build/images/servicios.svg') }}" alt="Ayuda para diversos servicios" class="icons-benefits">
+                <div class="col-6 col-lg-2 mb-4" data-aos="zoom-in" data-aos-delay="700">
+                    <img src="{{ asset('build/images/servicios.svg') }}" alt="Ayuda para diversos servicios" class="icons-benefits icon-pulse">
                     <p class="mt-2 text-benefits">Ayuda para diversos servicios</p>
                 </div>
             </div>
-            <a href="{{ path('app_benefits') }}" class="btn btn-whi mt-3 shadow">VER MÁS</a>
+            <a href="{{ path('app_benefits') }}" class="btn btn-whi mt-3 shadow btn-hover" data-aos="fade-up" data-aos-delay="800">VER MÁS</a>
         </div>
     </section>
 
-    <section class="py-5 mt-5">
-        <div class="container">
-            <h2 class="fw-bold text-center title-actions mb-4">NUESTRAS ACCIONES</h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <div class="card h-60 d-flex flex-row bg-card-actions">
-                        <img src="{{ asset('build/images/campana.jpg') }}" class="card-img-top" alt="Partido">
+    <section class="py-5 mt-5" data-aos="fade-up">
+        <div class="container d-flex flex-column justify-content-center">
+            <h2 class="fw-bold text-center title-actions mb-4 animate-title" data-aos="fade-down" data-aos-delay="200">NUESTRAS ACCIONES</h2>
+            <div class="row g-4 gallery-container">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-right" data-aos-delay="300">
+                    <div class="card h-60 bg-card-actions card-hover">
+                        <img src="{{ asset('build/images/campana.jpg') }}" class="card-img-top gallery-img" alt="Partido">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title-actions">PARTIDO CAMPAÑA</h5>
+                            <h5 class="card-title-actions animate-title">PARTIDO CAMPAÑA</h5>
                             <!--<p class="card-text small">¡Más que un partido, una causa que nos une! Ven y sé parte del encuentro amistoso donde el compañerismo, la alegría y el deporte se juntan para ayudar a quienes más lo necesitan. </p>
                             <a href="#" class="btn btn-whi mt-3 shadow">VER MAS</a> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <div class="card h-60 d-flex flex-row bg-card-actions">
-                        <img src="{{ asset('build/images/reunion.jpg') }}" class="card-img-top" alt="Reunión">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="card h-60 bg-card-actions card-hover">
+                        <img src="{{ asset('build/images/reunion.jpg') }}" class="card-img-top gallery-img" alt="Reunión">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title-actions">REUNIÓN ANUAL</h5>
+                            <h5 class="card-title-actions animate-title">REUNIÓN ANUAL</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <div class="card h-60 d-flex flex-row bg-card-actions">
-                        <img src="{{ asset('build/images/congreso.png') }}" class="card-img-top" alt="Congreso">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-right" data-aos-delay="500">
+                    <div class="card h-60 bg-card-actions card-hover">
+                        <img src="{{ asset('build/images/congreso.png') }}" class="card-img-top gallery-img" alt="Congreso">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title-actions">CONGRESO ANUAL</h5>
+                            <h5 class="card-title-actions animate-title">CONGRESO ANUAL</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <div class="card h-60 d-flex flex-row bg-card-actions">
-                        <img src="{{ asset('build/images/deportiva.jpg') }}" class="card-img-top" alt="Campaña deportiva">
+                <div class="col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-left" data-aos-delay="600">
+                    <div class="card h-60 bg-card-actions card-hover">
+                        <img src="{{ asset('build/images/deportiva.jpg') }}" class="card-img-top gallery-img" alt="Campaña deportiva">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title-actions">CAMPAÑA DEPORTIVA</h5>
+                            <h5 class="card-title-actions animate-title">CAMPAÑA DEPORTIVA</h5>
                         </div>
                     </div>
                 </div>
@@ -129,10 +128,10 @@
         </div>
     </section>
 
-    <section id="contact-home" class="text-white text-start d-flex align-items-center">
+    <section id="contact-home" class="text-white text-start d-flex align-items-center dramatic-section">
         <div class="container">
-            <h2 class="display-6 fw-bold contact-text-home text-outline">TODOS SOMOS UNO<br>Y UNO SOMOS TODOS</h2>
-            <a href="{{ path('app_contact') }}" class="btn btn-whi mt-3 shadow">¡ÚNETE!</a>
+            <h2 class="display-6 fw-bold contact-text-home text-outline dramatic-text" data-aos="zoom-in" data-aos-delay="200">TODOS SOMOS UNO<br>Y UNO SOMOS TODOS</h2>
+            <a href="{{ path('app_contact') }}" class="btn btn-whi mt-3 shadow btn-hover" data-aos="fade-up" data-aos-delay="600">¡ÚNETE!</a>
         </div>
     </section>
 {% endblock %}

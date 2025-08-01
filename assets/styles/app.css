@@ -1,17 +1,27 @@
 /* Global */
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
 body {
     background: #FFFFFF;
     box-sizing: border-box;
     min-height: 100vh;
     overflow-x: hidden;
+    max-width: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Montserrat", sans-serif;
+    padding-top: 110px;
+    position: relative;
+}
+* {
+    box-sizing: border-box;
 }
 #header-snrstpjf {
-    margin-top: 110px;
+    margin-top: 20px;
 }
 .header-text {
     font-weight: 600;
@@ -47,6 +57,11 @@ body {
 /* Navbar */
 .navbar.bg-snrstpjf {
     background-color: #FFFFFF;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .nav-link {
     margin: 0 50px;
@@ -64,7 +79,6 @@ body {
     opacity: 0.7;
 }
 .navbar-image:hover {
-    transform: scale(1.03);
     cursor: pointer;
 }
 .contact-icon-movil {
@@ -180,6 +194,8 @@ i {
 .bg-card-actions {
     background: linear-gradient(to right, #CECECE, #FFFFFF);
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
 }
 .card-img-top {
     margin: 25px;
@@ -204,6 +220,12 @@ i {
     padding: 7px 60px;
 }
 /* About us */
+.mv-text{
+    text-align: start;
+}
+.mv-text.v-text{
+    text-align: end;
+}
 .bg-header-aus {
     background:
             linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
@@ -260,18 +282,24 @@ i {
     transform: skewY(-5deg);
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    max-width: 100%;
 }
 .section-diagonal > .container {
     transform: skewY(5deg) !important;
+    max-width: 100%;
 }
 .section-diagonal-left {
     padding: 60px 0;
     transform: skewY(5deg);
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    max-width: 100%;
 }
 .section-diagonal-left > .container {
     transform: skewY(-5deg);
+    max-width: 100%;
 }
 .bg-green {
     background-color: #719440;
@@ -295,7 +323,18 @@ i {
     max-width: 400px;
     height: 600px;
     transform: translateY(-180px);
+    transition: all 0.3s ease;
 }
+.mockup-hover {
+    transition: all 0.5s ease;
+    transform-origin: center center;
+}
+.mockup-hover:hover {
+    transform: translateY(-190px) rotate3d(0, 1, 0, 3deg);
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 .subtitle-snrstpjf.text-end {
     transform: translateY(-160px);
     margin: 0;
@@ -304,6 +343,13 @@ i {
     transform: translateY(-160px);
     margin: 0;
 }
+.parallax-section {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+.section-diagonal-left.parallax-section:hover {
+    transform: skewY(5deg) translateY(-10px);
+}
 .download-app {
     background: url('../images/our_app/download-app .jpg');
     background-position: center center;
@@ -311,9 +357,49 @@ i {
     background-repeat: no-repeat;
     margin: 0;
     padding: 50px 0;
+    transition: all 0.3s ease;
 }
 .image-download-app {
     width: 200px;
+    transition: all 0.5s ease;
+}
+.image-download-app:hover {
+    transform: scale(1.05);
+}
+.download-button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+.download-button:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.download-button:hover::after {
+    content: "→";
+    position: absolute;
+    right: -20px;
+    animation: moveRight 1s infinite;
+}
+@keyframes moveRight {
+    0% { right: -20px; opacity: 0; }
+    50% { right: -25px; opacity: 1; }
+    100% { right: -30px; opacity: 0; }
+}
+/* Animation for AOS bounce */
+[data-aos="bounce"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+[data-aos="bounce"].aos-animate {
+    opacity: 1;
+    animation: bounce 1s;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
 }
 /* Contact */
 .bg-header-contact {
@@ -326,6 +412,9 @@ i {
     border-radius: 30px;
     padding: 70px 0;
     margin: 15px 100px;
+}
+#contact-snrstpjf {
+    margin-top: 20px;
 }
 .form-snrstpjf {
     box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
@@ -347,6 +436,9 @@ i {
 }
 @media (max-width: 575px) {
     /* Global */
+    body {
+        padding-top: 100px;
+    }
     .header-text {
         font-size: 28px;
     }
@@ -370,6 +462,13 @@ i {
     }
     .navbar-collapse {
         margin: 20px 0 0 0;
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .nav-link {
+        margin: 5px 0;
+        text-align: center;
     }
     .contact-icon-movil {
         display: flex;
@@ -394,6 +493,9 @@ i {
         width: 35px;
     }
     /* Index */
+    #home-section {
+        height: 60vh;
+    }
     .text-home {
         padding: 0 10px;
         transform: translateY(-200px);
@@ -427,11 +529,23 @@ i {
     }
     .card-title-actions {
         font-size: 20px;
+        text-align: center;
     }
     #contact-home {
         height: 50vh;
     }
+    .bg-card-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     /* About us */
+    .mv-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     .bg-header-aus {
         padding: 35px 0;
         margin: 15px;
@@ -494,7 +608,7 @@ i {
         font-size: 30px;
     }
     .subtitle-snrstpjf {
-        font-size: 33px;
+        font-size: 30px;
         text-align: center;
     }
     .text-snrstpjf {
@@ -513,6 +627,13 @@ i {
     }
     .navbar-collapse {
         margin: 20px 0 0 0;
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .nav-link {
+        margin: 5px 0;
+        text-align: center;
     }
     .contact-icon-movil {
         display: flex;
@@ -579,6 +700,12 @@ i {
         padding: 45px 0;
         margin: 15px 45px;
     }
+    .mv-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     /* Our app */
     .bg-header-app {
         padding: 45px 0;
@@ -627,11 +754,20 @@ i {
 }
 @media (min-width: 768px) and (max-width: 991px) {
     /* Global */
+    body {
+        padding-top: 100px;
+    }
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+    }
     .header-text {
         font-size: 35px;
     }
     .subtitle-snrstpjf {
-        font-size: 33px;
+        font-size: 31px;
     }
     .text-snrstpjf {
         font-size: 15px;
@@ -648,6 +784,13 @@ i {
     }
     .navbar-collapse {
         margin: 20px 0 0 0;
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .nav-link {
+        margin: 5px 15px;
+        text-align: center;
     }
     .contact-icon-movil {
         display: flex;
@@ -717,6 +860,40 @@ i {
         margin: 15px 70px;
     }
     /* Our app */
+    .mockup-hover:hover {
+        transform: translateY(-190px);
+    }
+    .download-button:hover::after {
+        right: -15px;
+        animation: moveRightMobile 1s infinite;
+    }
+    @keyframes moveRightMobile {
+        0% { right: -15px; opacity: 0; }
+        50% { right: -18px; opacity: 1; }
+        100% { right: -20px; opacity: 0; }
+    }
+    .mockup-hover:hover {
+        transform: translateY(-180px);
+        box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .parallax-section:hover,
+    .section-diagonal-left.parallax-section:hover {
+        transform: none;
+    }
+    .download-button:hover::after {
+        content: "→";
+        position: static;
+        margin-left: 10px;
+        animation: none;
+    }
+    .app-img {
+        animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(-180px); }
+        50% { transform: translateY(-185px); }
+        100% { transform: translateY(-180px); }
+    }
     .bg-header-app {
         padding: 50px 0;
         margin: 15px 70px;
@@ -854,6 +1031,13 @@ i {
     .text-outline {
         font-size: 70px;
     }
+    /* Navbar */
+    .nav-link {
+        margin: 0 40px;
+    }
+    .navbar-brand {
+        margin: 0 40px;
+    }
     /* Footer */
     .text-footer-snrstpjf {
         font-size: 16px;
@@ -883,6 +1067,13 @@ i {
     .text-outline {
         font-size: 70px;
     }
+    /* Navbar */
+    .nav-link {
+        margin: 0 50px;
+    }
+    .navbar-brand {
+        margin: 0 50px;
+    }
     /* Index */
     .text-home h2 {
         font-size: 40px;
@@ -896,5 +1087,281 @@ i {
     .image-movil {
         width: 350px;
     }
+}
 
+/* Animation styles */
+/* Parallax effect for hero section */
+.parallax-section {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+.parallax-bg {
+    background-attachment: fixed;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    max-width: 100%;
+    overflow: hidden;
+}
+/* Text animations */
+.animate-text {
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Title animations */
+.animate-title {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.animate-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: currentColor;
+    transition: width 0.5s ease;
+}
+.animate-title:hover::after {
+    width: 100%;
+}
+/* Button hover effects */
+.btn-hover {
+    transition: all 0.3s ease;
+}
+.btn-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    max-width: 100%;
+    transform-origin: center center;
+}
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+/* Gallery image effects */
+.gallery-img {
+    transition: all 0.5s ease;
+}
+.card-hover:hover .gallery-img {
+    transform: scale(1.05);
+}
+/* Icon pulse effect */
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.icon-pulse:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
+}
+/* Dramatic section with black and white effect */
+.dramatic-section {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+}
+.dramatic-section:hover {
+    filter: grayscale(0%);
+}
+.dramatic-text {
+    opacity: 0;
+    animation: dramaticEntrance 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+@keyframes dramaticEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* About Us page animations */
+/* Leader portrait hover effect */
+.portrait-img {
+    transition: all 0.3s ease;
+}
+
+.portrait-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* Mission and Vision cards hover effects */
+.mission-card, .vision-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.mission-card:hover, .vision-card:hover {
+    border-color: #ddd;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+/* Stance cards and icons hover effects */
+.stance-card {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.stance-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.stance-icon {
+    transition: all 0.3s ease;
+    filter: brightness(1);
+}
+.stance-card:hover .stance-icon {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+/* Typewriter effect for closing section */
+.typewriter-text {
+    overflow: hidden;
+    white-space: normal;
+    position: relative;
+}
+.highlight-text {
+    position: relative;
+    display: inline-block;
+    animation: highlightText 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+}
+@keyframes highlightText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Closing section background animation */
+.closing-section {
+    position: relative;
+    overflow: hidden;
+}
+.closing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-attachment: fixed;
+    animation: subtleZoom 20s infinite alternate ease-in-out;
+    z-index: -1;
+}
+@keyframes subtleZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+/* Contact page animations */
+/* Map animations */
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position: relative;
+}
+.map-container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+.map-frame {
+    transition: all 0.3s ease;
+}
+.map-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid #6b8e23;
+    border-radius: 15px;
+    transition: all 1s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+.map-container:hover::after {
+    border-width: 3px;
+    animation: drawBorder 1.5s ease-out;
+}
+@keyframes drawBorder {
+    0% {
+        border-top-width: 0;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 0;
+    }
+    25% {
+        border-top-width: 3px;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 0;
+    }
+    50% {
+        border-top-width: 3px;
+        border-right-width: 3px;
+        border-bottom-width: 0;
+        border-left-width: 0;
+    }
+    75% {
+        border-top-width: 3px;
+        border-right-width: 3px;
+        border-bottom-width: 3px;
+        border-left-width: 0;
+    }
+    100% {
+        border-top-width: 3px;
+        border-right-width: 3px;
+        border-bottom-width: 3px;
+        border-left-width: 3px;
+    }
+}
+/* Location icon animation */
+.location-icon {
+    width: 30px;
+    height: auto;
+    transition: all 0.3s ease;
 }

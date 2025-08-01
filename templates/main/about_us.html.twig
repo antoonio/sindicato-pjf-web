@@ -3,19 +3,19 @@
 {% block title %}Nosotros{% endblock %}
 
 {% block body %}
-    <section id="header-snrstpjf">
-        <div class="text-white text-center bg-header-aus">
-            <h2 class="m-0 header-text">NOSOTROS</h2>
+    <section id="header-snrstpjf" class="parallax-section">
+        <div class="text-white text-center bg-header-aus parallax-bg">
+            <h2 class="m-0 header-text" data-aos="fade-up" data-aos-delay="200">NOSOTROS</h2>
         </div>
     </section>
 
-    <section>
+    <section class="leader-section">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-md-5 text-center mb-3 mb-md-0">
-                    <img src="{{ asset('build/images/about_us/alberto-prado.png') }}" alt="Alberto Prado" class="img-fluid rounded">
+                <div class="col-md-5 text-center mb-3 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{{ asset('build/images/about_us/alberto-prado.png') }}" alt="Alberto Prado" class="img-fluid rounded portrait-img">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7" data-aos="fade-left" data-aos-delay="400">
                     <h4 class="mb-1-0 subtitle-snrstpjf">ALBERTO PRADO GÓMEZ</h4>
                     <p class="text-snrstpjf m-0">Secretario General del Sindicato Nacional de Renovación. Ex integrante de la Presidencia Nacional del Sindicato de los Trabajadores del Poder Judicial.</p>
                     <p class="text-snrstpjf m-0">Es Licenciado en Derecho y cuenta con una sólida trayectoria de más de 20 años en el Poder Judicial.</p>
@@ -27,10 +27,10 @@
     <section>
         <div class="container py-4">
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card-snrstpjf h-100 d-flex flex-column">
-                        <div class="p-4 flex-grow-1">
-                            <h5 class="subtitle-snrstpjf m-0">NUESTRO DÍA</h5>
+                <div class="col-md-6" data-aos="slide-right" data-aos-delay="200">
+                    <div class="card-snrstpjf h-100 d-flex flex-column mission-card">
+                        <div class="p-4 flex-grow-1 mv-text">
+                            <h5 class="subtitle-snrstpjf m-0 animate-title">NUESTRO DÍA</h5>
                             <p class="text-snrstpjf m-0"><strong>(MISIÓN)</strong></p>
                             <p class="text-snrstpjf m-0">
                                 Representar con hechos a las y los trabajadores del Poder Judicial,
@@ -42,13 +42,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card-snrstpjf h-100 d-flex flex-column">
+                <div class="col-md-6" data-aos="slide-left" data-aos-delay="300">
+                    <div class="card-snrstpjf h-100 d-flex flex-column vision-card">
                         <div class="image-wrapper-au">
                             <img src="{{ asset('build/images/about_us/our-tomorrow.jpg') }}" alt="Nuestro Mañana" class="imge-cover-au">
                         </div>
-                        <div class="p-4 flex-grow-1 text-end">
-                            <h5 class="subtitle-snrstpjf m-0">NUESTRO MAÑANA</h5>
+                        <div class="p-4 flex-grow-1 mv-text v-text">
+                            <h5 class="subtitle-snrstpjf m-0 animate-title">NUESTRO MAÑANA</h5>
                             <p class="text-snrstpjf m-0"><strong>(VISIÓN)</strong></p>
                             <p class="text-snrstpjf m-0">
                                 Ser un sindicato moderno, fuerte y confiable, que vele por el bienestar de las y los trabajadores del país.
@@ -61,34 +61,37 @@
     </section>
 
     <section>
-        <div class="container py-5">
-            <h4 class="text-center subtitle-snrstpjf mb-4">NUESTRA POSTURA ANTE PJF</h4>
-            <p class="text-center text-snrstpjf mb-4">En el Sindicato de Renovación creemos en el cambio, pero no en retroceder. La Reforma Judicial debe buscar construir mejores condiciones laborales, no destruir lo que se ha conseguido. Como sindicato confiamos, pero no dejamos de luchar por lo que nos pertenece.</p>
+        <div class="container py-5 d-flex flex-column">
+            <h4 class="text-center subtitle-snrstpjf mb-4 animate-title" data-aos="fade-down" data-aos-delay="200">NUESTRA POSTURA ANTE PJF</h4>
+            <p class="text-center text-snrstpjf mb-4" data-aos="fade-up" data-aos-delay="300">En el Sindicato de Renovación creemos en el cambio, pero no en retroceder. La Reforma Judicial debe buscar construir mejores condiciones laborales, no destruir lo que se ha conseguido. Como sindicato confiamos, pero no dejamos de luchar por lo que nos pertenece.</p>
             <div class="row justify-content-center text-white text-center">
-                <div class="col-lg-3 col-md-4 mb-3">
-                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
-                        <img src="{{ asset('build/images/icons/training.svg') }}" alt="Capacitación" class="icons-stance">
+                <div class="col-lg-3 col-md-4 mb-3" data-aos="fade-up" data-aos-easing="ease-out-back" data-aos-delay="400">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100 stance-card">
+                        <img src="{{ asset('build/images/icons/training.svg') }}" alt="Capacitación" class="icons-stance stance-icon">
                         <p class="text-snrstpjf mt-1 mb-0">Sí a la capacitación.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 mb-3">
-                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
-                        <img src="{{ asset('build/images/icons/professionalization.svg') }}" alt="Profesionalización" class="icons-stance">
+                <div class="col-lg-3 col-md-4 mb-3" data-aos="fade-up" data-aos-easing="ease-out-back" data-aos-delay="500">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100 stance-card">
+                        <img src="{{ asset('build/images/icons/professionalization.svg') }}" alt="Profesionalización" class="icons-stance stance-icon">
                         <p class="text-snrstpjf mt-1 mb-0">Sí a la profesionalización.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 mb-3">
-                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100">
-                        <img src="{{ asset('build/images/icons/rights.svg') }}" alt="Derechos" class="icons-stance">
+                <div class="col-lg-3 col-md-4 mb-3" data-aos="fade-up" data-aos-easing="ease-out-back" data-aos-delay="600">
+                    <div class="card-stance d-flex flex-column justify-content-center p-4 h-100 stance-card">
+                        <img src="{{ asset('build/images/icons/rights.svg') }}" alt="Derechos" class="icons-stance stance-icon">
                         <p class="text-snrstpjf mt-1 mb-0">No a perder nuestros derechos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="represent-aus">
+    <section id="represent-aus" class="parallax-section closing-section">
         <div class="container represent-content text-white text-center">
-            <p class="m-0 subtitle-snrstpjf">La estabilidad es un derecho, no un privilegio.<br>Seguiremos alzando la voz, porque defender al trabajador es defender la justicia.</p>
+            <p class="m-0 subtitle-snrstpjf typewriter-text" data-aos="fade-up" data-aos-delay="200">
+                <span class="highlight-text">La estabilidad es un derecho</span>, no un privilegio.<br>
+                Seguiremos alzando la voz, porque <span class="highlight-text">defender al trabajador es defender la justicia.</span>
+            </p>
         </div>
     </section>
 {% endblock %}
